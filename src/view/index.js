@@ -1,10 +1,13 @@
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import AddList from "./container/addList"
 
-import { Text } from "react-native";
-
-export default App = () => {
+export default class App extends Component {
     render () {
         return (
-            <Text>adasd</Text>
+            <View>
+                <AddList/>
+            </View>
         )
     }
 }

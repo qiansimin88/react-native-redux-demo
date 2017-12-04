@@ -7,8 +7,8 @@ import reducer from './reducer';   //所有的reducer
 //     增强器  通过applyMiddleware(...middlewares)来包中间件
 // )
 
-export default createStore({
+export default createStore(
     reducer,
-    {}
-})   //返回一个store 并且全局就一个 store  
+    {}   //初始state
+)   //返回一个store 并且全局就一个 store  
 
