@@ -5,10 +5,14 @@ import { connect } from "react-redux"
 class AddList extends Component {
     constructor ( props ) {
         super( props );
-        console.log( props );
     }
 
     render () {
+
+        const { dispatch, a } = this.props;
+        console.log( 11111 );
+        console.log( a );
+        console.log( dispatch );
         return ( 
             <View>
                 <Text>99111199</Text>
@@ -16,4 +20,11 @@ class AddList extends Component {
          )
     }
 }
-export default connect()(AddList);
+
+const mapStateToProps = ( sate ) => {
+    return {
+        ...{ a:1, b:2 }
+    }
+}
+
+export default connect( mapStateToProps )(AddList);
