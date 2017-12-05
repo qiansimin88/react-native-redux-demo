@@ -3,9 +3,15 @@ import * as types from '../action/actionCollection'
 const todo = ( state = {}, action ) => {
     switch (action.type) {
         case types.ADD_TODO: 
-            return {
-                '加':1
-            }
+           console.log('reducer感应到了');
+            return [
+                ...state,
+                {
+                    text: action.text,
+                    id: action.id,
+                    competed: false
+                }
+            ]
         default:
             return state;
     }
